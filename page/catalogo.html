@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>E-Bikes - Catalogo</title>
+	<link rel="sortcut icon" href="../img/favicon.png">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<nav>
+		<a href="../index.html">
+			<img src="../img/logo.png" alt="logo de ebikes">
+		</a>
+
+		<ul>
+			<li><a href="catalogo.html">Catalogo</a></li>
+			<li><a href="quienes_somos.html">Quienes somos</a></li>
+			<li><a href="contacto.html">Contacto</a></li>
+			<li><a href="iniciar_sesion.html">Iniciar sesion</a></li>
+		</ul>
+	</nav>
+
+	<header>
+		<h1>Vehiculos electricos</h1>
+	</header>
+
+	<main>
+		<section>
+			<table cellpadding="5px" cellspacing="5px">
+				<tr>
+					<th>Modelo</th>
+					<th>Precio</th>
+				</tr>
+
+				<tr>
+					<td>Moto L</td>
+					<td>U$D1350</td>
+				</tr>
+
+				<tr>
+					<td>Moto M</td>
+					<td>U$D1300</td>
+				</tr>
+
+				<tr>
+					<td>Moto S</td>
+					<td>U$D1200</td>
+				</tr>
+
+				<tr>
+					<td>Bike L</td>
+					<td>U$D1000</td>
+				</tr>
+
+				<tr>
+					<td>Bike M</td>
+					<td>U$D750</td>
+				</tr>
+
+				<tr>
+					<td>Bike S</td>
+					<td>U$D500</td>
+				</tr>
+
+				<tr>
+					<td>Monopatin L</td>
+					<td>U$D450</td>
+				</tr>
+
+				<tr>
+					<td>Monopatin M</td>
+					<td>U$D300</td>
+				</tr>
+
+				<tr>
+					<td>Monopatin S</td>
+					<td>U$D200</td>
+				</tr>
+			</table>
+		</section>
+		<br>
+		<section>
+			<form action="envio.php">
+				<fieldset>
+					<legend>Info del pedido</legend>
+
+					<label for="bici electrica">Bici electrica</label>
+					<input type="checkbox" id="biciElectrica" value="bikes">
+					<br>
+					<label for="patin electrico">Patin electrico</label>
+					<input type="checkbox" id="patinElectrico" value="patin electrico">
+					<br>
+					<label for="moto electrica">Moto electrica</label>
+					<input type="checkbox" id="motoElectrica" value="moto electrica">
+				</fieldset>
+				<br>
+				<fieldset>
+					<legend>Info del envío</legend>
+
+					<label for="local">Retiro en el local</label>
+					<input type="radio" id="local" name="envio" value="local">
+					<br>
+					<label for="domicilio">Envio a domicilio</label>
+					<input type="radio" id="domicilio" name="envio" value="domicilio">
+					<br>
+					<label for="localidad">Localidad</label>
+					<select name="provincia" id="localidad">
+						<option>--seleccionar localidad--</option>
+						<option value="cordoba">Cordoba</option>
+						<option value="bsas">Buenos Aires</option>
+						<option value="Interior">Interior del país</option>
+					</select>
+				</fieldset>
+				<br>
+				<input type="reset" value="Cancelar">
+				<input type="submit" value="Enviar">
+			</form>
+		</section>
+	</main>
+	<br>
+	<footer>
+		<a href="https://www.facebook.com" target="_blank">
+			<img src="../img/facebook.png" alt="logo de facebook">
+		</a>
+
+		<a href="https://www.twitter.com" target="_blank">
+			<img src="../img/twitter.png" alt="logo de twitter">
+		</a>
+	</footer>
+</body>
+</html>

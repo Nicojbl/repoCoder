@@ -1,0 +1,101 @@
+/* General */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto:wght@300;400&display=swap');
+
+html{
+	font-size: 100%;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+/*////////*/
+
+
+/* NavBar */
+nav{
+	background-color: #BFBFBF;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 30px;
+}
+
+	nav ul{
+		display: flex;
+	}
+
+		nav ul li{
+			list-style: none;
+			margin-right: 30px;
+		}
+
+			nav ul li a{
+				font-size: 2.2rem;
+				text-decoration: none;
+				color: #09090D;
+				font-family: 'Roboto', sans-serif;
+			}
+
+			nav ul li a:hover{
+				color: #F2F2F2;
+			}
+/* Termina navBar */
+
+/* Textos/Titulos */
+h1,h2,h3{
+	color: #5881A6;
+	font-size: 4rem;
+	font-family: 'Patrick Hand', cursive;
+}
+
+p{
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	color: ##373740;
+}
+/*///////////////*/
+
+/* Header */
+.imgHeader{
+	width: 100%;
+}
+
+.textCenter{
+	text-align: center;
+}
+/*////////*/
+
+/* Main */
+.quienesSomos {
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    border: solid #474747 2px;
+    text-align: center;
+}
+
+.container{
+	position: relative;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-end;
+	flex-flow: row wrap;
+	margin-top: 50px;
+}
+
+.imgTamaño{
+	height: auto;
+	width: auto;
+	max-height: 400px;
+	max-width: 400px;
+}
+
+.ubicacion{
+	display: flex;
+	justify-content: center;
+	margin: 90px;
+}
