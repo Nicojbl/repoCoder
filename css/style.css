@@ -8,50 +8,22 @@ html{
 *{
 	padding: 0;
 	margin: 0;
+	box-sizing: border-box;
 }
 /*////////*/
 
-
-/* NavBar */
-nav{
-	background-color: #BFBFBF;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 30px 30px;
-}
-
-	nav ul{
-		display: flex;
-	}
-
-		nav ul li{
-			list-style: none;
-			margin-right: 30px;
-		}
-
-			nav ul li a{
-				font-size: 2.2rem;
-				text-decoration: none;
-				color: #09090D;
-				font-family: 'Roboto', sans-serif;
-			}
-
-			nav ul li a:hover{
-				color: #F2F2F2;
-			}
-/* Termina navBar */
-
 /* Textos/Titulos */
 h1,h2,h3{
-	color: #5881A6;
-	font-size: 4rem;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0) 35%, rgba(0,212,255,1) 100%);
+	color: #000000;
+	font-size: 1.8rem;
 	font-family: 'Patrick Hand', cursive;
 }
 
 p{
 	font-family: 'Roboto', sans-serif;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	line-height: 2rem;
 	color: ##373740;
 }
@@ -65,9 +37,162 @@ p{
 .textCenter{
 	text-align: center;
 }
+
+@keyframes animateP{
+	0%{width: 100%}
+	25%{background-color: yellow;}
+	50%{background-color: orange;}
+	75%{background-color: violet;}
+	100%{background-color: blue;}
+}
+
+.animate{
+	animation-name: animateP;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+	animation-delay: 0s;
+}
 /*////////*/
 
-/* Main */
+/* MainIndex */
+.contenedorGrid{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	"nav" 
+	"header" 
+	"filtros" 
+	"productos" 
+	"aside" 
+	"map" 
+	"pie"; 
+}
+
+.botonera{
+	grid-area: nav;
+	background-color: #BFBFBF;
+	display: flex;
+	top: 0;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+	.botonera ul{
+			display: flex;
+		}
+
+		.botonera ul li{
+			list-style: none;
+			margin-top: 30px;
+			margin-right: 20px;
+		}
+
+			.botonera ul li a{
+				font-size: 1.5rem;
+				text-decoration: none;
+				color: #09090D;
+				font-family: 'Roboto', sans-serif;
+			}
+
+			.botonera ul li a:hover{
+				color: #F2F2F2;
+			}
+
+.header{
+	grid-area: header;
+}
+
+.productos{
+	grid-area: productos;
+	width: 100%;
+	text-align: center;
+}
+
+	.productos img:hover{
+		transform: translate(15px);
+		cursor: pointer;
+	}
+
+.bloque1{
+	background-color: blue;
+	grid-area: filtros;
+	width: 100%;
+}
+
+.bloque2{
+	background-color: green;
+	grid-area: aside;
+	margin-top: 30px;
+	width: 100%;
+}
+
+.ubicacion{
+	grid-area: map;
+	widows: 100%;
+}
+
+.pie{
+	grid-area: pie;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.imgTamaño{
+	height: auto;
+	width: auto;
+	max-height: 400px;
+	max-width: 400px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+@media (min-width: 768px){
+	.contenedorGrid{
+		grid-template-columns: 20% 80%;
+		grid-template-rows: auto;
+		grid-template-areas: 
+		"nav nav" 
+		"header header" 
+		"filtros productos" 
+		"aside aside" 
+		"map map" 
+		"pie pie";
+	}
+}
+
+@media (min-width: 1024px){
+	.contenedorGrid{
+		grid-template-columns: 15% 70% 15%;
+		grid-template-rows: auto;
+		grid-template-areas: 
+		"nav nav nav" 
+		"header header header" 
+		"filtros productos aside" 
+		". map ." 
+		"pie pie pie";
+	}
+
+	.ubicacion{
+		margin: 20px auto;
+	}
+
+	.botonera{
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+		.botonera ul li{
+				margin-top: 0px;
+			}
+}
+/*///////////*/
+
+/* MainQuienesSomos */
 .quienesSomos {
     width: 90%;
     height: auto;
@@ -77,25 +202,34 @@ p{
     border: solid #474747 2px;
     text-align: center;
 }
+/*//////////////////*/
 
-.container{
-	position: relative;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: flex-end;
-	flex-flow: row wrap;
-	margin-top: 50px;
+/* MainCatalogo */
+.vehiculosElectricosGrid{
+	display: grid;
+	grid-template-columns: 70vw 30vw;
+	grid-template-rows: repeat(3, auto);
+	grid-template-areas: 
+	"header header" 
+	"productos pedido" 
+	"pie pie";
 }
 
-.imgTamaño{
-	height: auto;
-	width: auto;
-	max-height: 400px;
-	max-width: 400px;
+.headerC{
+	grid-area: header;
+	text-align: center;
 }
 
-.ubicacion{
-	display: flex;
-	justify-content: center;
-	margin: 90px;
+.productosC{
+	grid-area: productos;
+	 margin: 20px auto;
+}
+
+.pedido{
+	grid-area: pedido;
+ 	margin: 20px auto;
+}
+
+.pieC{
+	grid-area: pie;
 }
